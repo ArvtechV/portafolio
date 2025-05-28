@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Portafolio</title>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
+
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDhxATCrmdW3kizruwPTL7123LnssshmNk",
+      authDomain: "mi-portafolio-guestbook.firebaseapp.com",
+      projectId: "mi-portafolio-guestbook",
+      storageBucket: "mi-portafolio-guestbook.appspot.com",
+      messagingSenderId: "594627823146",
+      appId: "1:594627823146:web:009d9aaad41b65016ae553"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">MiPortafolio</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header id="inicio" class="hero">
+    <div class="hero-content">
+      <h1>Hola, soy <span class="resaltado">Carlos D'AR</span></h1>
+      <h2>Desarrollador Flutter & Web</h2>
+      <p>Apasionado por crear experiencias digitales únicas y funcionales.</p>
+      <div class="hero-buttons">
+        <a href="#proyectos" class="btn">Ver proyectos</a>
+        <a href="#contacto" class="btn btn-secundario">Contáctame</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="sobre-mi" class="sobre-mi" data-aos="zoom-in" data-aos-delay="200">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p>
+        ¡Hola! Soy un desarrollador apasionado por la tecnología, especializado en Flutter, desarrollo web con HTML/CSS y diseño de experiencias digitales intuitivas.
+      </p>
+      <img src="tu-foto.jpg" alt="Carlos Del Angel Ramirez" class="foto-perfil">
+      <p>
+        <a href="assets/CV_CarlosDelAngel.pdf" class="btn-cv" download>📄 Descargar CV</a>
+      </p>
+      <h3>Habilidades</h3>
+      <ul class="habilidades">
+        <li>Flutter & Dart</li>
+        <li>HTML / CSS</li>
+        <li>JavaScript</li>
+        <li>Firebase</li>
+        <li>UI/UX básico</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="proyectos" class="proyectos" data-aos="fade-up">
+    <div class="container">
+      <h2>Proyectos</h2>
+      <div class="galeria-proyectos">
+        <div class="tarjeta-proyecto">
+          <img src="images/calculadora.png" alt="Calculadora Flutter">
+          <h3>Calculadora Flutter</h3>
+          <p>App con historial, modo oscuro, cursor táctil y animaciones.</p>
+          <a href="https://github.com/tuusuario/calculadora-flutter" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="tarjeta-proyecto">
+          <img src="images/portafolio.png" alt="Portafolio Web">
+          <h3>Portafolio Web</h3>
+          <p>Web moderna con HTML y CSS puro, inspirada en jhey.dev.</p>
+          <a href="https://github.com/tuusuario/portafolio" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="tarjeta-proyecto">
+          <img src="images/snake-game.png" alt="Snake Game">
+          <h3>Juego Snake Flutter</h3>
+          <p>App con animaciones, modo oscuro y estilo personalizado.</p>
+          <a href="https://github.com/tuusuario/snake-flutter" target="_blank">Ver en GitHub</a>
+        </div>
+
+        <div class="tarjeta-proyecto">
+          <img src="images/mercados.png" alt="App Mercados">
+          <h3>Comparador de Mercados</h3>
+          <p>App con login, red social y Firebase en Flutter.</p>
+          <a href="https://github.com/tuusuario/mercados-flutter" target="_blank">Ver en GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>¿Te interesa trabajar conmigo? Escríbeme por el medio que prefieras:</p>
+      <div class="redes">
+        <a href="mailto:carlosdar_13@outlook.com" title="Correo">
+          <img src="images/icono-email.png" alt="Correo">
+        </a>
+        <a href="https://wa.me/5211234567890?text=¡Hola!%20Vi%20tu%20portafolio" title="WhatsApp">
+          <img src="images/icono-whatsapp.png" alt="WhatsApp">
+        </a>
+        <a href="https://github.com/ArvtechV" title="GitHub">
+          <img src="images/icono-github.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/carlosdart" title="LinkedIn">
+          <img src="images/icono-linkedin.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="guestbook">
+    <h2>📖 Libro de Visitas</h2>
+    <form id="guestbook-form">
+      <input type="text" id="name" placeholder="Tu nombre" required />
+      <textarea id="message" placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+    <div id="guestbook-entries"></div>
+  </section>
+
+  <!-- JS -->
+  <script src="js/script.js"></script>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <!-- Animación de Spotlight -->
+  <div class="spotlight"></div>
+  <script>
+    const spotlight = document.querySelector('.spotlight');
+    document.addEventListener('mousemove', (e) => {
+      spotlight.style.setProperty('--x', `${e.clientX}px`);
+      spotlight.style.setProperty('--y', `${e.clientY}px`);
+    });
+  </script>
+
+  <!-- Cursor personalizado -->
+  <div class="custom-cursor"></div>
+
+  <!-- Guestbook con Firestore -->
+  <script>
+    const form = document.getElementById("guestbook-form");
+    const entriesContainer = document.getElementById("guestbook-entries");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (name && message) {
+        await db.collection("guestbook").add({
+          name,
+          message,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+        form.reset();
+      }
+    });
+
+    db.collection("guestbook")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) => {
+        entriesContainer.innerHTML = "";
+        snapshot.forEach((doc) => {
+          const data = doc.data();
+          const div = document.createElement("div");
+          div.className = "entry";
+          div.innerHTML = `<strong>${data.name}</strong><p>${data.message}</p>`;
+          entriesContainer.appendChild(div);
+        });
+      });
+  </script>
+
+  <!-- Footer dinámico -->
+  <footer class="footer">
+    <p>© <span id="year"></span> CaDAR. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
